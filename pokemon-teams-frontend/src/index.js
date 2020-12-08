@@ -11,10 +11,10 @@ const toPokemonLi = ({ nickname, species, id }) => `
   </li>
 `;
 
-const toTrainerCard = ({ id, pokemons }) => {
+const toTrainerCard = ({ name, id, pokemons }) => {
   $main.innerHTML += `
     <div class="card" data-id="${id}">
-      <p>Prince</p>
+      <p>${name}</p>
       <button data-trainer-id=${id} onclick="addPokemon(event)">Add Pokemon</button>
       <ul class="team">
         ${pokemons.map(toPokemonLi).join('\n')}
